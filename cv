@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سوسن طالب الحداد | السيرة الذاتية</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #8b5cf6;
+      --secondary: #ec4899;
+      --dark: #25213b;
+      --text: #5e5a70;
+      --light: #faf8ff;
+      --white: #fff;
+      --border: #eee9f7;
+      --shadow: 0 10px 30px rgba(77, 45, 120, .10);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Cairo", sans-serif;
+      background: var(--light);
+      color: var(--text);
+      line-height: 1.9;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: auto;
+    }
+
+    header {
+      min-height: 600px;
+      color: white;
+      background: linear-gradient(135deg, #5b21b6, #ec4899);
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      width: min(1100px, 92%);
+      margin: auto;
+      padding: 22px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.35rem;
+      font-weight: 800;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 22px;
+    }
+
+    nav a {
+      font-weight: 600;
+      transition: .3s;
+    }
+
+    nav a:hover {
+      color: #fce7f3;
+    }
+
+    .hero {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 55px 0 90px;
+    }
+
+    .profile-image {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center;
+      border: 5px solid rgba(255,255,255,.9);
+      margin-bottom: 18px;
+      box-shadow: 0 8px 25px rgba(0,0,0,.25);
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      margin-bottom: 8px;
+    }
+
+    .hero h2 {
+      color: #fce7f3;
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 720px;
+      color: #fff7fc;
+      margin: auto;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .btn {
+      border: 0;
+      border-radius: 8px;
+      padding: 11px 23px;
+      font-family: inherit;
+      font-weight: 700;
+      cursor: pointer;
+      transition: .3s;
+    }
+
+    .btn-primary {
+      background: white;
+      color: #7c3aed;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      background: #fdf2f8;
+    }
+
+    .btn-outline {
+      color: white;
+      border: 1px solid rgba(255,255,255,.7);
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,.15);
+    }
+
+    main {
+      padding: 65px 0;
+    }
+
+    section {
+      margin-bottom: 65px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .section-title h2 {
+      color: var(--dark);
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+
+    .section-title span {
+      display: block;
+      width: 55px;
+      height: 4px;
+      margin: auto;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      border-radius: 10px;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 22px;
+    }
+
+    .card,
+    .skill,
+    .education,
+    .service {
+      background: var(--white);
+      padding: 26px;
+      border-radius: 15px;
+      box-shadow: var(--shadow);
+    }
+
+    .card h3,
+    .education h3,
+    .service h3 {
+      color: var(--dark);
+      margin-bottom: 12px;
+    }
+
+    .info-list {
+      list-style: none;
+    }
+
+    .info-list li {
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .info-list li:last-child {
+      border-bottom: 0;
+    }
+
+    .info-list strong {
+      color: var(--dark);
+      margin-left: 5px;
+    }
+
+    .education {
+      max-width: 800px;
+      margin: auto;
+      border-right: 5px solid var(--primary);
+    }
+
+    .degree {
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .skill {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      color: var(--dark);
+      font-weight: 600;
+    }
+
+    .skill-icon {
+      min-width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      color: white;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      border-radius: 10px;
+      font-size: 1.2rem;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .service {
+      text-align: center;
+    }
+
+    .service .icon {
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+
+    .contact {
+      text-align: center;
+      color: white;
+      background: var(--dark);
+      padding: 42px 20px;
+      border-radius: 18px;
+    }
+
+    .contact h2 {
+      margin-bottom: 8px;
+    }
+
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 24px 0;
+    }
+
+    .contact-info a {
+      background: rgba(255,255,255,.1);
+      padding: 8px 15px;
+      border-radius: 7px;
+      transition: .3s;
+    }
+
+    .contact-info a:hover {
+      background: var(--primary);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #d8d2e8;
+      background: #171329;
+      font-size: .9rem;
+    }
+
+    @media (max-width: 750px) {
+      nav {
+        flex-direction: column;
+        gap: 13px;
+      }
+
+      nav ul {
+        gap: 10px;
+        font-size: .8rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .about,
+      .skills,
+      .services {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media print {
+      nav,
+      .buttons,
+      footer {
+        display: none;
+      }
+
+      header {
+        min-height: auto;
+        background: #7c3aed;
+      }
+
+      main {
+        padding: 25px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header id="home">
+    <nav>
+      <div class="logo">سيرتي الذاتية</div>
+
+      <ul>
+        <li><a href="#about">نبذة عني</a></li>
+        <li><a href="#education">التعليم</a></li>
+        <li><a href="#skills">المهارات</a></li>
+        <li><a href="#services">الخدمات</a></li>
+        <li><a href="#contact">تواصل معي</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero container">
+      <div>
+
+        <!-- ضعي الصورة المرفقة في نفس مجلد الملف باسم profile.jpg -->
+
+        <h1>سوسن طالب الحداد</h1>
+        <h2>مصممة محتوى رقمي وخريجة نظم معلومات</h2>
+
+        <p>
+          شغوفة بالتكنولوجيا والإبداع والتصميم الرقمي، أمتلك خبرة ومهارات
+          في تصميم المحتوى الرقمي، وتصميم القوالب القابلة للتعديل،
+          وتحرير الفيديوهات والتصوير.
+        </p>
+
+        <div class="buttons">
+          <a href="#contact" class="btn btn-primary">تواصلي معي</a>
+
+          <button class="btn btn-outline" onclick="window.print()">
+            تحميل السيرة الذاتية
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section id="about">
+      <div class="section-title">
+        <h2>نبذة عني</h2>
+        <span></span>
+      </div>
+
+      <div class="about">
+        <div class="card">
+          <h3>من أنا؟</h3>
+
+          <p>
+            أنا سوسن طالب، خريجة نظم معلومات وشغوفة بالتكنولوجيا والإبداع
+            والتصميم الرقمي. أمتلك خبرة ومهارات في تصميم المحتوى الرقمي،
+            وتصميم القوالب القابلة للتعديل، وتحرير الفيديوهات والتصوير.
+          </p>
+
+          <br>
+
+          <p>
+            أسعى إلى تقديم تصاميم وخدمات إبداعية تساعد الأفراد والمشاريع
+            على تحويل أفكارهم إلى محتوى رقمي احترافي وجذاب.
+          </p>
+
+          <br>
+
+          <p>
+            أؤمن بأن التصميم ليس مجرد شكل جميل، بل هو وسيلة للتعبير عن
+            الأفكار وترك انطباع مميز.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>معلوماتي</h3>
+
+          <ul class="info-list">
+            <li><strong>الاسم:</strong> سوسن طالب الحداد</li>
+            <li><strong>الموقع:</strong> أبو قوة، البحرين</li>
+            <li><strong>البريد:</strong> s.alhaddad1136@gmail.com</li>
+            <li><strong>الهاتف:</strong> 32102021</li>
+            <li><strong>التخصص:</strong> نظم المعلومات </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="section-title">
+        <h2>المؤهل العلمي</h2>
+        <span></span>
+      </div>
+
+      <div class="education">
+        <h3>بكالوريوس في نظم المعلومات</h3>
+        <div class="degree">جامعة البحرين</div>
+        <p>
+          خريجة تخصص نظم المعلومات مع اهتمام بالمجالات التقنية والتصميم
+          الرقمي وصناعة المحتوى.
+        </p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="section-title">
+        <h2>المهارات</h2>
+        <span></span>
+      </div>
+
+      <div class="skills">
+        <div class="skill">
+          <div class="skill-icon">🎨</div>
+          <span>تصميم المحتوى والمنشورات الرقمية</span>
+        </div>
+
+        <div class="skill">
+          <div class="skill-icon">✏️</div>
+          <span>تصميم القوالب القابلة للتعديل عبر Canva</span>
+        </div>
+
+        <div class="skill">
+          <div class="skill-icon">📄</div>
+          <span>تصميم السير الذاتية والدعوات الرقمية</span>
+        </div>
+
+        <div class="skill">
+          <div class="skill-icon">🎬</div>
+          <span>تحرير وإنتاج الفيديوهات</span>
+        </div>
+
+        <div class="skill">
+          <div class="skill-icon">📷</div>
+          <span>التصوير وتعديل الصور</span>
+        </div>
+
+        <div class="skill">
+          <div class="skill-icon">💻</div>
+          <span>
+            Adope Packegs
+      
+</span>
+        </div>
+
+        <div class="skill">
+          <div class="skill-icon">📊</div>
+          <span>استخدام Microsoft Excel</span>
+        </div>
+
+        <div class="skill">
+          <div class="skill-icon">⚙️</div>
+          <span>الأدوات والتقنيات الرقمية</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="section-title">
+        <h2>الخدمات التي أقدمها</h2>
+        <span></span>
+      </div>
+
+      <div class="services">
+        <div class="service">
+          <div class="icon">🖼️</div>
+          <h3>تصميم المحتوى</h3>
+          <p>تصميم منشورات ومحتوى رقمي جذاب للمنصات المختلفة.</p>
+        </div>
+
+        <div class="service">
+          <div class="icon">🎥</div>
+          <h3>تحرير الفيديو</h3>
+          <p>تحرير وإنتاج فيديوهات إبداعية تناسب مختلف الاستخدامات.</p>
+        </div>
+
+        <div class="service">
+          <div class="icon">📸</div>
+          <h3>التصوير وتعديل الصور</h3>
+          <p>تصوير الصور وتعديلها لإظهارها بجودة وشكل احترافي.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact">
+        <h2>تواصلي معي</h2>
+
+        <p>
+          يسعدني التعاون معك وتحويل أفكارك إلى محتوى رقمي مميز.
+        </p>
+
+        <div class="contact-info">
+          <a href="mailto:s.alhaddad1136@gmail.com">
+            ✉ s.alhaddad1136@gmail.com
+          </a>
+
+          <a href="tel:+97332102021">
+            ☎ 32102021
+          </a>
+
+          <a href="‎Add me as a contact on WhatsApp.
+‎Add me as a contact on WhatsApp.
+https://wa.me/qr/YEARH2XS2IEQK1" target="_blank">
+            واتساب
+          </a>
+        </div>
+
+        <a class="btn btn-primary" href="mailto:s.alhaddad1136@gmail.com">
+          أرسلي رسالة
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 سوسن طالب الحداد - جميع الحقوق محفوظة
+  </footer>
+
+</body>
+</html>
